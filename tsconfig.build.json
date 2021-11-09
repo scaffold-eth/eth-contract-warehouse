@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "lib",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "paths": {
+      "~~": ["./src"],
+      "~~/*": ["./src/*"]
+    }
+  },
+  "files": [],
+  "include": ["./src/**/*"],
+  "exclude": [
+    "docs/**/*",
+    "**/typedoc/**",
+    "test/**/*",
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "../../node_modules/**/*",
+    "./.yalc/**/*"
+  ]
+}

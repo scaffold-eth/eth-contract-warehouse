@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "lib",
+    "lib": ["dom", "ESNext", "ES2017"],
+    "sourceMap": true,
+    "inlineSources": true,
+    "allowJs": false,
+    "declaration": true,
+    "declarationDir": "lib",
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "esModuleInterop": false,
+    "isolatedModules": false,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "~~/*": ["./src/*"],
+      "scripts/*": ["./scripts/*"],
+      "helpers/*": ["src/helpers/*"],
+      "contracts/*": ["./contracts/*"],
+      "tests/*": ["./tests/*"],
+      "typechain/*": ["./typechain/*"]
+    }
+  },
+  "include": ["types", "scripts", "test", "src", "./hardhat.config.ts", "./deploy"],
+  "exclude": [
+    "lib/**/*",
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "../../node_modules/**/*",
+    "./.yalc/**/*"
+  ]
+}
