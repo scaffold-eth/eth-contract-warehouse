@@ -3,3 +3,5 @@
 # Except this file
 !.gitignore
 !contract-types
+!contracts
+!index.ts

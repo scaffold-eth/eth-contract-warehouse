@@ -4,7 +4,7 @@ const { nodeExternalsPlugin } = require('esbuild-node-externals');
 
 esbuild
   .build({
-    entryPoints: ['./src/index.ts', './src/functions/index.ts', './src/helpers/index.ts', './src/helpers/__global.ts'],
+    entryPoints: ['./src/index.ts', './src/functions/index.ts'],
     outdir: 'lib',
     bundle: true,
     minifyWhitespace: true,

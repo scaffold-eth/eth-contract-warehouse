@@ -23,24 +23,22 @@
     "strict": true,
     "rootDir": ".",
     "baseUrl": ".",
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types"],
+    "types": [],
+    "typeRoots": [],
     "paths": {
-      "~~/*": ["./src/*"],
-      "scripts/*": ["./scripts/*"],
-      "helpers/*": ["src/helpers/*"],
-      "contracts/*": ["./contracts/*"],
-      "tests/*": ["./tests/*"],
-      "typechain/*": ["./typechain/*"]
+      "~~": ["./src/"],
+      "~~/*": ["./src/*"]
     }
   },
-  "include": ["types", "scripts", "test", "src", "./hardhat.config.ts", "./deploy"],
+  "include": ["src", "./hardhat.config.ts", "./deploy"],
   "exclude": [
     "lib/**/*",
     "node_modules",
     "**/node_modules",
     "**/node_modules/**",
     "../../node_modules/**/*",
-    "./.yalc/**/*"
+    ".husky",
+    "./.yalc/**/*",
+    "**/*.md"
   ]
 }

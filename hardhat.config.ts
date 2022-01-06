@@ -10,7 +10,7 @@ import '@typechain/hardhat';
 import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-ethers';
 import '@tenderly/hardhat-tenderly';
-import 'hardhat-deploy';
+// import 'hardhat-deploy';
 // not required as we are using @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers
 
 // import 'solidity-coverage';
@@ -109,12 +109,20 @@ const config: HardhatUserConfig = {
   },
   paths: {
     sources: './src/contracts',
-    cache: './generated/cache',
-    artifacts: './generated/artifacts',
-    deployments: './generated/deployments',
+    cache: './src/generated/cache',
+    artifacts: './src/generated/artifacts',
+    deployments: './src/generated/deployments',
   },
   typechain: {
-    outDir: './src/factories',
+    outDir: './src/generated/contract-types',
   },
 };
 export default config;
+
+// subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS, async (_, { config }, runSuper) => {
+//   const sources = await runSuper();
+//   const testSources = await glob(join(config.paths.tests, '**', '*.sol'));
+//   const erc20Sources = await glob(join('node_modules', '@openzeppelin/contracts/token/ERC20/ERC20.sol'));
+//   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+//   return [...sources, ...testSources, ...erc20Sources];
+// });

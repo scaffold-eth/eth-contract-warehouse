@@ -22,5 +22,3 @@ import 'hardhat-deploy/src/type-extensions';
 // };
 
 export type { HardhatRuntimeEnvironment as HardhatRuntimeEnvironmentExtended };
-
-export type TEthers = typeof ethers & HardhatEthersHelpers;
